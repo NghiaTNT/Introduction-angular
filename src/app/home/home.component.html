@@ -1,3 +1,25 @@
 <h1>Welcome to Angular 14 !</h1>
 <h3>{{ name }}: {{age}}</h3>
 
+<!-- <span *ngIf="age < 18; else abc" class="underAge">Bạn dưới 18 tuổi</span>
+<ng-template #abc><span class="overAge">Bạn trên 18 tuổi</span></ng-template> -->
+
+<span *ngIf="age < 18" class="underAge">Bạn dưới 18 tuối</span>
+<span *ngIf="age >= 18" class="overAge">Bạn trên 18 tuổi</span>
+<br><br>
+
+<input [(ngModel)]="name"/>
+<br>
+
+Danh sách xe: <br>
+<div *ngFor="let vehicle of vehicles">
+  <li>{{vehicle}}</li>
+</div>
+
+<div>
+  <select name="" id="">
+    <option *ngFor="let option of vehicles" value="{{option}}">
+      {{option}}
+    </option>
+  </select>
+</div>

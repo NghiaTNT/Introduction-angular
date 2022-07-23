@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   public name = 'Nghĩa Nguyễn';
-  public age = 21;
+  public age = 22;
+  public vehicles = ['Toyota', 'Honda', 'Mitsubishi'];
+
   constructor() { }
 
   ngOnInit(): void {
