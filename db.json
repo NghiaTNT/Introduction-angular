@@ -1,0 +1,61 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "code": "MSV - 01",
+      "gender": "Male",
+      "firstName": "Nghia",
+      "lastName": "Nguyen",
+      "dob": "2001/01/13",
+      "email": "example123@gmai.com",
+      "phone": "0123-050-124",
+      "img": ""
+    },
+    {
+      "id": 2,
+      "code": "MSV - 02",
+      "gender": "Male",
+      "firstName": "Khang",
+      "lastName": "Văn Công",
+      "dob": "10/01/2000",
+      "email": "khangvan@gmail.com",
+      "phone": "0012445112",
+      "img": "abc"
+    },
+    {
+      "id": 7,
+      "code": "MSV - 03",
+      "gender": "Male",
+      "firstName": "Phú",
+      "lastName": "Nhuận",
+      "dob": "13/01/2001",
+      "email": "phunhuan@gmail.com",
+      "phone": "010101101",
+      "img": "abcxy"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "testing",
+      "author": "author testing",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "Huy Nguyễn",
+    "age": 20,
+    "gender": "male"
+  }
+}

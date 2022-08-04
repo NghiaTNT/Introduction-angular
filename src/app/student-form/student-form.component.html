@@ -1,0 +1,64 @@
+<div class="container">
+  <h1>Nhập 1 sinh viên mới</h1>
+  <form [formGroup]="studentForm" class="example-form">
+    <mat-form-field class="form-header">
+      <mat-label>Mã sinh viên</mat-label>
+      <input matInput placeholder="" formControlName="code">
+    </mat-form-field>
+
+    <!-- <span *ngIf="profileForm.controls.name.invalid" class="errorMessage"> * Cần phải nhập tên</span>
+    <br>
+    <label for="age">Age: </label>
+    <input id="age" type="text" formControlName="age" required>
+    <span *ngIf="profileForm.controls.age.invalid" class="errorMessage"> * Cần phải nhập tuổi</span> -->
+    <br>
+    <mat-form-field class="form-header">
+      <mat-label>Giới tính</mat-label>
+      <input matInput placeholder="" formControlName="gender">
+      <!-- <mat-select formControlName="gender">
+        <mat-option *ngFor="let gender of genders" [value]="gender">
+          {{gender}}
+        </mat-option>
+      </mat-select> -->
+    </mat-form-field>
+
+    <mat-form-field class="form-header">
+      <mat-label>Tên</mat-label>
+      <input matInput placeholder="" formControlName="firstName">
+    </mat-form-field>
+
+    <mat-form-field class="form-header">
+      <mat-label>Họ</mat-label>
+      <input matInput placeholder="" formControlName="lastName">
+    </mat-form-field>
+
+    <mat-form-field class="form-header">
+      <mat-label>Ngày tháng năm sinh</mat-label>
+      <input matInput placeholder="" formControlName="dob">
+    </mat-form-field>
+
+    <mat-form-field class="form-header">
+      <mat-label>Điện thư</mat-label>
+      <input matInput placeholder="" formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field class="form-header">
+      <mat-label>Điện thoại</mat-label>
+      <input matInput placeholder="" formControlName="phone">
+    </mat-form-field>
+
+    <mat-form-field class="form-header">
+      <mat-label>Hình</mat-label>
+      <input matInput placeholder="" formControlName="img">
+    </mat-form-field>
+
+    <br>
+    <button class="btn btn-success" type="submit" [disabled]="!studentForm.valid" (click)="saveAndGoToList()">
+      Lưu và trở về danh sách
+    </button>
+    &nbsp;
+    <button class="btn btn-success" type="button" [disabled]="!studentForm.valid" (click)="saveAndAgain()">
+      Lưu <span *ngIf="id === 0"> và nhập mới</span>
+    </button>
+  </form>
+</div>

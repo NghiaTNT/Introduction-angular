@@ -1,0 +1,33 @@
+<div>
+  <button (click)="addStudent()" mat-raised-button color="primary">
+    <mat-icon>add_circle</mat-icon>
+    Thêm sinh viên
+  </button>
+  <table id="customers">
+    <tr>
+      <th>Thao tác</th>
+      <th>Id</th>
+      <th>Mã sinh viên</th>
+      <th>Giới tính</th>
+      <th>Tên</th>
+      <th>Họ</th>
+      <th>Điện thư</th>
+      <th>Điện thoại</th>
+    </tr>
+
+    <tr *ngFor="let student of students">
+      <td>
+        <mat-icon style="cursor: pointer;" title="Nhấn để xoá" (click)="delStudent(student.id)">clear</mat-icon>
+        &nbsp;
+        <mat-icon style="cursor: pointer;" title="Nhấn để sửa" (click)="editStudent(student.id)">create</mat-icon>
+      </td>
+      <td>{{ student?.id }}</td>
+      <td>{{ student?.code }}</td>
+      <td>{{ student?.gender }}</td>
+      <td>{{student?.firstName}}</td>
+      <td>{{student?.lastName}}</td>
+      <td>{{student?.email}}</td>
+      <td>{{student?.phone}}</td>
+    </tr>
+  </table>
+</div>

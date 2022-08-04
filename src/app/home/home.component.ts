@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../Services/common.service';
 
 @Component({
   selector: 'app-home',
@@ -8,10 +9,22 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   public name = 'Nghĩa Nguyễn';
-  public age = 22;
+  public age = 16;
   public vehicles = ['Toyota', 'Honda', 'Mitsubishi'];
 
-  constructor() { }
+  constructor(private common: CommonService) {
+    this.age = common.age;
+  }
+
+  tangTuoi(): void {
+    this.common.age++;
+    this.age = this.common.age;
+  }
+
+  giamTuoi(): void {
+    this.common.age--;
+    this.age = this.common.age;
+  }
 
   ngOnInit(): void {
   }
